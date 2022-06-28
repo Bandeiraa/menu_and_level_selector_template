@@ -1,0 +1,53 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Node",
+"class": "GlobalData",
+"language": "GDScript",
+"path": "res://scripts/global.gd"
+}, {
+"base": "Control",
+"class": "LevelSelector",
+"language": "GDScript",
+"path": "res://scripts/level_selector.gd"
+}, {
+"base": "Control",
+"class": "Menu",
+"language": "GDScript",
+"path": "res://scripts/menu.gd"
+} ]
+_global_script_class_icons={
+"GlobalData": "",
+"LevelSelector": "",
+"Menu": ""
+}
+
+[application]
+
+config/name="Level Selector"
+run/main_scene="res://scenes/menu.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+Global="*res://scripts/global.gd"
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
